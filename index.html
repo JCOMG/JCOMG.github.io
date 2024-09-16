@@ -205,6 +205,11 @@
         }
 
         /* ABOUT SECTION */
+        .highlight {
+            font-weight: bold;
+            font-size: 1.2rem; /* Adjust the size as needed */
+        }
+
         #about {
           position: relative;
         }
@@ -228,15 +233,35 @@
           right: -5rem;
           bottom: 2.5rem;
         }
+
+
         .details-container {
-          padding: 1.5rem;
-          flex: 1;
-          background: white;
-          border-radius: 2rem;
-          border: rgb(53, 53, 53) 0.1rem solid;
-          border-color: rgb(163, 163, 163);
-          text-align: center;
+            width: 45%; /* Ensure both containers have the same width */
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            flex: 1;
+            background: white;
+            border-radius: 2rem;
+            border: rgb(53, 53, 53) 0.1rem solid;
+            border-color: rgb(163, 163, 163);
+            text-align: center;
         }
+
+        .article-container {
+            width: 100%;
+            height: 250px; /* Set a fixed height to both containers */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .project-img {
+            width: 100%; /* Ensure the image takes the full width of the container */
+            height: 100%; /* Ensure the image takes the full height of the container */
+            object-fit: cover; /* Ensures the image covers the entire container without distortion */
+        }
+
 
         /* EXPERIENCE SECTION */
         #experience {
@@ -409,7 +434,11 @@
         footer {
           height: 26vh;
           margin: 0 1rem;
+          margin-top: -60px; /* Adjust the value as needed to move the footer up */
+          text-align: center;
+          padding: 10px 0;
         }
+
         footer p {
           text-align: center;
         }
@@ -497,11 +526,14 @@
             </div>
             <div class="text-container">
                 <p>
-                    I have experience in Java and Python, and developing scalable solutions for back-end systems using
-                    frameworks like Flask and Spring. I have successfully led and contributed to hackathons, delivering
+                    I have experience in <span class="highlight">Java</span> and <span class="highlight">Python</span>,
+                    and developing scalable solutions for back-end systems using
+                    frameworks like <span class="highlight">Flask</span> and <span class="highlight">Spring Boot</span>.
+                    I have successfully led and contributed to hackathons, delivering
                     impactful solutions such as a library management system. Also, an AI-driven health management
                     platform for my dissertation. I hold an MSc in Computer Science (University of Birmingham, 2024),
-                    and I am proficient in Agile methodologies and working with cross-cultural teams. Currently based in
+                    and I am proficient in <span class="highlight">Agile</span> methodologies and working with
+                    cross-cultural teams. Currently based in
                     Birmingham, UK, I hold a UK Post-Study Visa valid until January 2027 and am open to relocation for
                     the right opportunity.
                 </p>
@@ -571,7 +603,54 @@
 </section>
 
 
+<section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./static/pic/Spring Boot .png" alt="Spring Boot" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">Multiple Activity Register System</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/JCOMG/Spring-boot---Activity'">
+                        Github
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img src="./static/pic/Predict Future Weight.png" alt="Predict Future Weight" class="project-img">
+                </div>
+                <h2 class="experience-sub-title project-title">Predict Future Weight</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/JCOMG/Healthy-Weight'">
+                        Github
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./static/pic/email.png" alt="Email icon" class="icon contact-icon email-icon">
+          <p><a href="jimmy1999928@gmail.com">jimmy1999928@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./static/pic/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+          <p><a href="https://www.linkedin.com/in/chih-lin-chuang-98a626250/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
 <!-- Remaining Sections (About, Experience, Projects, Contact, Footer) -->
+
 
 <footer>
     <nav>
