@@ -4,6 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -442,7 +443,12 @@
         footer p {
           text-align: center;
         }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
+
 </head>
 <body>
 <!-- HTML Content -->
@@ -484,7 +490,7 @@
         <div class="btn-container">
             <button
                     class="btn btn-color-2"
-                    onclick="window.open('./static/pic/UK RESUME-7.pdf')"
+                    onclick="window.open('./static/pic/UK RESUME-8.pdf')"
             >
                 Download CV
             </button>
@@ -630,25 +636,46 @@
                             onclick="location.href='https://github.com/JCOMG/Healthy-Weight'">
                         Github
                     </button>
+                    <button class="btn btn-color-2 project-btn" onclick="showVideo()">
+                        Play Video
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Video Player</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <video width="100%" controls>
+                    <source src="./static/pic/Predict Future Weight.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
         <div class="contact-info-container">
-          <img src="./static/pic/email.png" alt="Email icon" class="icon contact-icon email-icon">
-          <p><a href="jimmy1999928@gmail.com">jimmy1999928@gmail.com</a></p>
+            <img src="./static/pic/email.png" alt="Email icon" class="icon contact-icon email-icon">
+            <p><a href="jimmy1999928@gmail.com">jimmy1999928@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
-          <img src="./static/pic/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
-          <p><a href="https://www.linkedin.com/in/chih-lin-chuang-98a626250/">LinkedIn</a></p>
+            <img src="./static/pic/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+            <p><a href="https://www.linkedin.com/in/chih-lin-chuang-98a626250/">LinkedIn</a></p>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 <!-- Remaining Sections (About, Experience, Projects, Contact, Footer) -->
 
 
@@ -673,6 +700,13 @@
       menu.classList.toggle('open');
       icon.classList.toggle('open');
     }
+    function showVideo() {
+        var myModal = new bootstrap.Modal(document.getElementById('videoModal'));
+        myModal.show();
+    }
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
